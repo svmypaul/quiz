@@ -47,6 +47,7 @@ if 'quiz_started' in st.session_state and st.session_state.quiz_started:
         # Button to view the answer
         if st.button('View Answer', key=f'view_{current_question}'):
             col1, col2 = st.columns(2)
+            st.text(f"Sentence: {questions[current_question]["Sentence"]}")
             st.markdown("---")
             with col1:
                 st.success(questions[current_question]["answer"])
